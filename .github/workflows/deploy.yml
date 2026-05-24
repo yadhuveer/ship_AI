@@ -44,4 +44,4 @@ jobs:
               -e REDIS_HOST=${{ secrets.REDIS_HOST }} \
               -e REDIS_PORT=${{ secrets.REDIS_PORT }} \
               -e REDIS_DB=${{ secrets.REDIS_DB }} \
-              ghcr.io/${{ github.repository_owner }}/ship_fastapi:latests
+              ghcr.io/${{ github.repository_owner }}/ship_fastapi:latest
