@@ -36,3 +36,4 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 plt.figure(figsize=(12,6))
 tree.plot_tree(clf, feature_names=X.columns, class_names=["Avoid", "Good"], filled=True)
 plt.show()
+#new trigger
