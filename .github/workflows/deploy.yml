@@ -1,0 +1,47 @@
+name: Deploy FastAPI
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to GHCR
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build & Push FastAPI Image
+        run: |
+          docker build -t ghcr.io/${{ github.repository_owner }}/ship_fastapi:latest .
+          docker push ghcr.io/${{ github.repository_owner }}/ship_fastapi:latest
+
+      - name: Deploy to Droplet
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            docker pull ghcr.io/${{ github.repository_owner }}/ship_fastapi:latest
+
+            docker stop fastapi || true
+            docker rm fastapi || true
+
+            docker run -d \
+              -p 5000:5000 \
+              --name fastapi \
+              -e OWM_API_KEY=${{ secrets.OWM_API_KEY }} \
+              -e MAPBOX_API_KEY=${{ secrets.MAPBOX_API_KEY }} \
+              -e REDIS_HOST=${{ secrets.REDIS_HOST }} \
+              -e REDIS_PORT=${{ secrets.REDIS_PORT }} \
+              -e REDIS_DB=${{ secrets.REDIS_DB }} \
+              ghcr.io/${{ github.repository_owner }}/ship_fastapi:latests
