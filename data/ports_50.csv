@@ -1,0 +1,51 @@
+port_id,port_name,country,lat,lon
+P001,Shanghai,China,31.2304,121.4737
+P002,Singapore,Singapore,1.3521,103.8198
+P003,Ningbo-Zhoushan,China,29.8683,121.544
+P004,Shenzhen,China,22.5431,114.0579
+P005,Guangzhou,China,23.1291,113.2644
+P006,Busan,South Korea,35.1796,129.0756
+P007,Hong Kong,China,22.3193,114.1694
+P008,Qingdao,China,36.0662,120.3826
+P009,Tianjin,China,39.3434,117.3616
+P010,Dubai (Jebel Ali),UAE,25.276987,55.296249
+P011,Rotterdam,Netherlands,51.9225,4.47917
+P012,Antwerp,Belgium,51.2602,4.3976
+P013,Hamburg,Germany,53.5461,9.9661
+P014,Los Angeles,USA,33.7361,-118.2624
+P015,Long Beach,USA,33.7701,-118.1937
+P016,New York/New Jersey,USA,40.6681,-74.0451
+P017,Savannah,USA,32.0809,-81.0912
+P018,Santos,Brazil,-23.9608,-46.3336
+P019,Valencia,Spain,39.4667,-0.375
+P020,Algeciras,Spain,36.1408,-5.4562
+P021,Felixstowe,United Kingdom,51.955,1.3324
+P022,Bremerhaven,Germany,53.5396,8.5809
+P023,Gioia Tauro,Italy,38.4626,15.93
+P024,Piraeus,Greece,37.9481,23.663
+P025,Istanbul,Turkey,41.0082,28.9784
+P026,Jeddah,Saudi Arabia,21.4858,39.1925
+P027,Colombo,Sri Lanka,6.9271,79.8612
+P028,Port Klang,Malaysia,3.0019,101.392
+P029,Laem Chabang,Thailand,13.095,100.843
+P030,Tanjung Pelepas,Malaysia,1.3667,103.5333
+P031,Manzanillo (MX),Mexico,19.05,-104.3333
+P032,Vancouver,Canada,49.2827,-123.1207
+P033,Prince Rupert,Canada,54.315,-130.32
+P034,Melbourne,Australia,-37.8136,144.9631
+P035,Sydney,Australia,-33.8688,151.2093
+P036,Durban,South Africa,-29.8587,31.0218
+P037,Maputo,Mozambique,-25.9692,32.5737
+P038,Mombasa,Kenya,-4.0435,39.6682
+P039,Karachi,Pakistan,24.8615,67.0099
+P040,Mumbai,India,18.975,72.8258
+P041,Chittagong,Bangladesh,22.336,91.8317
+P042,Yangon,Myanmar,16.8661,96.1951
+P043,Ho Chi Minh City,Vietnam,10.8231,106.6297
+P044,Jakarta,Indonesia,-6.1751,106.865
+P045,Manila,Philippines,14.5995,120.9842
+P046,Seattle,USA,47.6062,-122.3321
+P047,Houston,USA,29.7499,-95.3584
+P048,Abu Dhabi,UAE,24.4539,54.3773
+P049,Salalah,Oman,17.0151,54.0924
+P050,Doha,Qatar,25.2854,51.531
