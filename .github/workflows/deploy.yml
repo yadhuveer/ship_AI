@@ -37,7 +37,7 @@ jobs:
             docker rm fastapi || true
 
             docker run -d \
-              -p 5000:5000 \
+              -p 8000:8000 \
               --name fastapi \
               -e OWM_API_KEY=${{ secrets.OWM_API_KEY }} \
               -e MAPBOX_API_KEY=${{ secrets.MAPBOX_API_KEY }} \
