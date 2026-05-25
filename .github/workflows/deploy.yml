@@ -33,11 +33,21 @@ jobs:
           script: |
             docker pull ghcr.io/${{ github.repository_owner }}/ship_fastapi:latest
 
+            docker network create shipnet || true
+
             docker stop fastapi || true
             docker rm fastapi || true
+            docker stop redis || true
+            docker rm redis || true
+
+            docker run -d \
+              --name redis \
+              --network shipnet \
+              redis:alpine
 
             docker run -d \
               -p 8000:8000 \
+              --network shipnet \
               --name fastapi \
               -e OWM_API_KEY=${{ secrets.OWM_API_KEY }} \
               -e MAPBOX_API_KEY=${{ secrets.MAPBOX_API_KEY }} \
