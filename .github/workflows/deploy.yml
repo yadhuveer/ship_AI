@@ -46,7 +46,7 @@ jobs:
               redis:alpine
 
             docker run -d \
-              -p 8000:8000 \
+              -p 127.0.0.1:8000:8000 \
               --network shipnet \
               --name fastapi \
               -e OWM_API_KEY=${{ secrets.OWM_API_KEY }} \
